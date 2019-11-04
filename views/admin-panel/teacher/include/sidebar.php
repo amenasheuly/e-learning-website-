@@ -75,13 +75,14 @@ if (@$_SESSION['email']) {
 
      <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-sitemap"></i><span>Chat with Student</span>
+                    <i class="fa fa-sitemap"></i><span>Chat with Others</span>
                     <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
                 </a>
-                <ul class="treeview-menu">
-                    <li><a href="../submission/sub-list.php">Active Student list</a></li>
+                         
+               <ul class="treeview-menu">
+                    <li><a href="../chat/active.php">All Member list</a></li>
 
                 </ul>
             </li>

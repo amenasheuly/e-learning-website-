@@ -42,10 +42,14 @@
                     </div>
                     <div class="panel-body">
                         <form class="col-sm-12" action="store.php" method="post">
-                                                                          
+                            <div class="col-sm-6 form-group">
+                                <label>Class</label>
+                                <input type="hidden" class="form-control" name="id">
+                                <input type="text" class="form-control" name="class">
+                            </div>                                               
                            <div class="col-sm-6 form-group">
                                 <label>Subject</label>
-                                <input type="hidden" class="form-control" name="id">
+                                
                                 <input type="text" class="form-control" name="subject">
                             </div>                                           
                             <div class="col-sm-12 form-group">                 

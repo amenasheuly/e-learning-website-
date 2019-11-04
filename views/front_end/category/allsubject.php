@@ -21,25 +21,25 @@
 
     <section class="content content-light">
         <div class="container">
-
+            <p class="text-center"><a href="" class="btn btn-theme btn-gray"> Academic </a></p>
             <!-- Category boxes with icon & name -->
             <div class="row category-box-row">
                 <hr class="invisible" />
 
                 <div class="col-md-2">
-                    <a href="../video-first/video-list.php" class="category-box-item">
+                    <a href="../video/video-bn.php?class=1" class="category-box-item">
                         <i class="fa fa-book fa-5x"></i>
                         <h2>Class 1</h2>
                     </a>
                 </div>
                 <div class="col-md-2">
-                    <a href="../video-scond/video-list2.php" class="category-box-item">
+                    <a href="../video/video-bn.php?class=2" class="category-box-item">
                         <i class="fa fa-book fa-5x"></i>
                         <h2>Class 2</h2>
                     </a>
                 </div>
                 <div class="col-md-2">
-                    <a href="../video-third/video-list3.phpl" class="category-box-item">
+                    <a href="../video/video-bn.php?class=3" class="category-box-item">
                         <i class="fa fa-book fa-5x"></i>
                         <h2>Class 3</h2>
                     </a>
@@ -47,38 +47,38 @@
                 <!-- Category boxes with icon & name -->
 
                 <div class="col-md-2">
-                    <a href="../video-four/video-list4.php" class="category-box-item">
+                    <a href="../video/video-bn.php?class=4" class="category-box-item">
                         <i class="fa fa-book fa-5x"></i>
                         <h2>Class 4</h2>
                     </a>
                 </div>
                 <div class="col-md-2">
-                    <a href="../video-five/video-list5.php" class="category-box-item">
+                    <a href="../video/video-bn.php?class=5" class="category-box-item">
                         <i class="fa fa-book fa-5x"></i>
                         <h2>Class 5</h2>
                     </a>
                 </div>
                 <div class="col-md-2">
-                    <a href="../video-six/video-list.php" class="category-box-item">
+                    <a href="../video/video-bn.php?class=6" class="category-box-item">
                         <i class="fa fa-book fa-5x"></i>
                         <h2>Class 6</h2>
                     </a>
                 </div>
 
                 <div class="col-md-2">
-                    <a href="../video-seven/video-list.php" class="category-box-item">
+                    <a href="../video/video-bn.php?class=7" class="category-box-item">
                         <i class="fa fa-book fa-5x"></i>
                         <h2>Class 7</h2>
                     </a>
                 </div>
                 <div class="col-md-2">
-                    <a href="../jsc/video-list.php" class="category-box-item">
+                    <a href="../video/video-bn.php?class=jsc" class="category-box-item">
                         <i class="fa fa-book fa-5x"></i>
                         <h2>JSC</h2>
                     </a>
                 </div>
                 <div class="col-md-2">
-                    <a href="../ssc/video-list.php" class="category-box-item">
+                    <a href="../video/video-bn.php?class=ssc" class="category-box-item">
                         <i class="fa fa-book fa-5x"></i>
                         <h2>SSC</h2>
                     </a>
@@ -86,21 +86,21 @@
                 <!-- Category boxes with icon & name -->
 
                 <div class="col-md-2">
-                    <a href="../hsc/video-list.php" class="category-box-item">
+                    <a href="../video/video-bn.php?class=hsc" class="category-box-item">
                         <i class="fa fa-book fa-5x"></i>
                         <h2>HSC</h2>
                     </a>
                 </div>
                 <div class="col-md-2">
-                    <a href="../skill/video-list.php" class="category-box-item">
+                    <a href="../video/video-bn.php?class=software" class="category-box-item">
                         <i class="fa fa-book fa-5x"></i>
-                        <h2> Software Skills</h2>
+                        <h2>Software</h2>
                     </a>
                 </div>
                 <div class="col-md-2">
-                    <a href="../language/video-list.php" class="category-box-item">
+                    <a href="../video/video-bn.php?class=language" class="category-box-item">
                         <i class="fa fa-book fa-5x"></i>
-                        <h2>Language Skill </h2>
+                        <h2>Language</h2>
                     </a>
                 </div>
             </div>

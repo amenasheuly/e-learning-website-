@@ -48,8 +48,22 @@ if(@$_SESSION['user']){
         <form action="replies.php" method="post">
             <center>
                 <br>
+      <?php 
+      if($_GET['id']){
+       $check=mysqli_query($link,"SELECT * FROM `topics` WHERE topic_id='".$_GET['id']."'");
+       if(mysqli_num_rows($check)){
 
+           while($row=mysqli_fetch_assoc($check)) {
+               $topic_name =$row['topic_name'];
+
+               ?>
                 Answer of the Question: <br>
+                <input style="resize: none;width: 400px;height: 50px;" name="replies_name" value="<?php echo $topic_name;?>" readonly><br>
+            <?php 
+        }
+        }
+    }
+                ?>
                 <textarea style="resize: none;width: 400px;height: 300px;" name="con"></textarea><br>
                 <input type="submit" name="submit" value="post" style="width: 400px;">
             </center>
@@ -58,12 +72,12 @@ if(@$_SESSION['user']){
 
     </body>
     <?php
-
+      $replies_name = @$_POST['replies_name'];
     $content = @$_POST['con'];
     $date = date("y-m-d");
     if (isset($_POST['submit'])) {
         if($content){
-              if($query = mysqli_query($link,"INSERT INTO `online_learning`.`replies` (`replies_id`, `replies_content`, `replies_creator`, `date`) VALUES ('', '".$content."', '".$_SESSION["user"]."', '".$date."');")){
+              if($query = mysqli_query($link,"INSERT INTO `online_learning`.`replies` (`replies_id`, `replies_name`,`replies_content`, `replies_creator`, `date`) VALUES ('', '".$replies_name."', '".$content."', '".$_SESSION["user"]."', '".$date."');")){
 
                     echo 'success';
                 }else{

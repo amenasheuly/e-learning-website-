@@ -3,7 +3,7 @@
 <!-- Site wrapper -->
 <div class="wrapper">
     <header class="main-header">
-        <a href="../index.php" class="logo"> <!-- Logo -->
+        <a href="../user/index.php" class="logo"> <!-- Logo -->
             <span class="logo-mini">
                         <!--<b>A</b>H-admin-->
                         <img src="../../../../resource/admin/assets/dist/img/mini-logo.png" alt="">

@@ -42,30 +42,46 @@
                             <a class="btn btn-primary" href="video-list.php"> <i class="fa fa-list"></i>video List </a>
                         </div>
                     </div>
+                    <?php 
+                     if(isset($_POST['submit'])){
+    
+                    $class = @$_POST['class'];
+
+                    $query =  "SELECT * FROM subject WHERE class ='".$class."'";
+                     $select_posts = mysqli_query($link,$query);
+                      }
+                     ?>
                     <div class="panel-body">
+                        <form class="col-sm-12" action="" method="post">
+                              <div class="col-sm-6 form-group">
+                                <label>Class</label>
+                                <input type="text" class="form-control" name="class">
+                            </div> 
+                             <div class="col-sm-6 reset-button">                
+                                <input type="submit"class="btn btn-success" name="submit">
+                            </div>
+                        </form>
                         <form class="col-sm-12" action="file-store.php" method="post" enctype="multipart/form-data">
                             <div class="col-sm-6 form-group">
                                 <label>Date</label>
                                   <input type="hidden" class="form-control" name="id">
                                 <input type="date" class="form-control" name="date">
                             </div>
-                             <div class="col-sm-6 form-group">
+                            <div class="col-sm-6 form-group">
+                                <label>Author</label>
+                                <input type="text" class="form-control" placeholder="Author" name="author">
+
+                            </div>
+                              <div class="col-sm-6 form-group">
                                 <label>Class</label>
-                                <input type="text" class="form-control" name="class">
-                            </div>                        
-                          
-                               
-                             
-                                   
-
-
+                                <input type="text" class="form-control" name="class" value="<?php echo $class;?>"readonly>
+                            </div> 
                              <div class="col-sm-6 form-group">
                                      <label>Subject</label>
                                     <select  class="form-control" id="exampleSelect1" name="subject">                             
                                     <?php
-                                    include '../connect.php';
-                                    $list = mysqli_query($link,"SELECT * FROM subject");
-                                    while ($row_ah = mysqli_fetch_assoc($list)) {
+                                   
+                                    while ($row_ah = mysqli_fetch_assoc($select_posts)) {
                                     ?>
                                     <option value="<?php echo $row_ah['subject']; ?>" selected class="test"><?php echo $row_ah['subject']; ?></option>
                                     <?php } ?>
@@ -77,22 +93,20 @@
                                 <label>Title</label>
                                 <input type="text" class="form-control" placeholder="Title" name="title" >
                             </div>
+                            <div class="col-sm-6 form-group">
+                                <label>Author email</label>
+                                <input type="email" class="form-control"  name="a_email" >
+                            </div>
                             <div class="col-sm-12 form-group">
                                 <label>Description</label>
                                 <input type="text" class="form-control" placeholder="Description" name="des" >
                             </div>
-                            <div class="col-sm-12 form-group">
-                                <label>Author</label>
-                                <input type="text" class="form-control" placeholder="Author" name="author">
-                            </div>
+                           
                             <div class="col-sm-12 form-group">
                                 <label>Video Link</label>
                                 <input type="text" class="form-control" placeholder="Link" name="video" >
                             </div>
-                            <div class="col-sm-12 form-group">
-                                <label>Author email</label>
-                                <input type="email" class="form-control"  name="a_email" >
-                            </div>
+                            
                             <div class="col-sm-6 form-group">
                                 <label>Assisgnment upload</label>
                                 <input type="file" name="file" id="file">

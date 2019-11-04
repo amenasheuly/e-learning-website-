@@ -40,7 +40,25 @@
                                 <a class="btn btn-primary" href="ass-list.php"> <i class="fa fa-list"></i>Assignment List </a>
                             </div>
                         </div>
+                            <?php 
+                     if(isset($_POST['submit'])){
+    
+                    $class = @$_POST['class'];
+
+                    $query =  "SELECT * FROM subject WHERE class ='".$class."'";
+                     $select_posts = mysqli_query($link,$query);
+                      }
+                     ?>
                         <div class="panel-body">
+                            <form class="col-sm-12" action="" method="post">
+                              <div class="col-sm-6 form-group">
+                                <label>Class</label>
+                                <input type="text" class="form-control" name="class">
+                            </div> 
+                             <div class="col-sm-6 reset-button">                
+                                <input type="submit"class="btn btn-success" name="submit">
+                            </div>
+                        </form>
                             <form class="col-sm-12" method="post" action="file-store.php" enctype="multipart/form-data">
                                
                                  <div class="col-sm-6 form-group">
@@ -53,18 +71,18 @@
                                     <label> Submission Date</label>
                                     <input type="date" class="form-control" name="s_date"required>
                                 </div>
-                            <div class="col-sm-6 form-group">
-                                    <label>Class </label>
-                                    <input type="text" class="form-control" name="class"required>
-                                </div>
+                             <div class="col-sm-6 form-group">
+                                <label>Class</label>
+                                 
+                                <input type="text" class="form-control" name="class" value="<?php echo $class;?>"readonly>
+                            </div>
 
                                 <div class="col-sm-6 form-group">
                                      <label>Subject</label>
                                     <select  class="form-control" id="exampleSelect1" name="subject">                             
                                     <?php
-                                    include '../connect.php';
-                                    $list = mysqli_query($link,"SELECT * FROM subject");
-                                    while ($row_ah = mysqli_fetch_assoc($list)) {
+                                  
+                                    while ($row_ah = mysqli_fetch_assoc($select_posts)) {
                                     ?>
                                     <option value="<?php echo $row_ah['subject']; ?>" selected class="test"><?php echo $row_ah['subject']; ?></option>
                                     <?php } ?>

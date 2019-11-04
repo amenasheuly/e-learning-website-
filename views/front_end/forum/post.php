@@ -60,7 +60,7 @@ if(@$_SESSION['user']){
     </body>
     <?php
     $t_name = @$_POST['topic_name'];
-    $content = @$_POST['topic_content'];
+    $content = @$_POST['con'];
     $date = date("y-m-d");
     if (isset($_POST['submit'])) {
         if($t_name && $content){

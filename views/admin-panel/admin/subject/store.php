@@ -2,10 +2,10 @@
 <?php
 require '../connect.php';
 if(isset($_POST['submit'])){
-
+$class =@$_POST['class'];
 $subject = @$_POST['subject'];
      
-     $sql = "INSERT INTO `subject`(`id`, `subject`) VALUES('', '$subject')";    
+     $sql = "INSERT INTO `subject`(`id`, `class`, `subject`) VALUES('', '$class', '$subject')";    
 
       
         if (mysqli_query($link, $sql)) {

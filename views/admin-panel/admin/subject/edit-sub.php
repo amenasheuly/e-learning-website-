@@ -50,7 +50,7 @@ error_reporting(0);
                      $select_posts = mysqli_query($link,$query);
                         while ($row=mysqli_fetch_assoc($select_posts)) {
                         $id = $row['id'];
-                       
+                        $class = $row['class'];
                         $subject = $row['subject'];
                        
 }
@@ -60,10 +60,13 @@ error_reporting(0);
                             <form class="col-sm-12" action="" method="GET">
                             <div class="col-sm-12 form-group">
                                 
-                                  <input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>">
+                            <input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>">
                                
                             </div>
-                                                 
+                          <div class="col-sm-12 form-group">
+                                <label>Class</label>
+                                <input type="text" class="form-control" name="class" value="<?php echo $class;?>">
+                            </div>                       
                           <div class="col-sm-12 form-group">
                                 <label>Subject</label>
                                 <input type="text" class="form-control" name="subject" value="<?php echo $subject;?>">
@@ -76,10 +79,10 @@ error_reporting(0);
 <?php 
 if($_GET['submit']){
 
-
+$class=$_GET['class'];
 $subject=$_GET['subject'];
 
-  $up_query= "UPDATE subject SET subject='$subject' WHERE id='$id'";
+  $up_query= "UPDATE subject SET subject='$subject',class='$class' WHERE id='$id'";
   $data=mysqli_query($link,$up_query);
   
   if($data){

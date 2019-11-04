@@ -54,11 +54,13 @@ if(@$_SESSION['user']) {
        $check=mysqli_query($link,"SELECT * FROM `topics` WHERE topic_id='".$_GET['id']."'");
        if(mysqli_num_rows($check)){
            while($row=mysqli_fetch_assoc($check)) {
+             $id = $_GET['id'];
                echo "<h2>".$row['topic_name']."</h2>";
                echo "<h5>".$row['topic_content']."</h5>";
                echo "<h6>"."Posted by:"." ".$row['topic_creator']."</h6>";
                echo "<h6>"."Date:"." ".$row['date']."</h6>";
-
+ echo " <a href='replies.php?id=$id'><button style='width: 350px; margin-left:'>Reply Question</button></a>
+";
            }
        }else{
            echo 'topic not found';
@@ -68,14 +70,26 @@ if(@$_SESSION['user']) {
    }
    ?>
 
-    <a href="replies.php?id=$id"><button style="width: 350px; margin-left:">Reply Question</button></a>
-
+   
     <div>
 
         <?php
        
         if($_GET['id']){
-            $check=mysqli_query($link,"SELECT * FROM `replies` WHERE replies_id='".$_GET['id']."'");
+
+  $check_t=mysqli_query($link,"SELECT * FROM `topics` WHERE topic_id='".$_GET['id']."'");
+       if(mysqli_num_rows($check_t)){
+
+           while($row=mysqli_fetch_assoc($check_t)) {
+               $topic_name =$row['topic_name'];
+
+       
+
+
+
+
+
+            $check=mysqli_query($link,"SELECT * FROM `replies` WHERE replies_name='".$topic_name."'");
             if(mysqli_num_rows($check)){
                 while($row=mysqli_fetch_assoc($check)) {
                     echo "<button>";
@@ -84,7 +98,9 @@ if(@$_SESSION['user']) {
                     echo "<h6>"."Date:"." ".$row['date']."</h6>";
                     echo "</button>"."<br>";
                      }
-            }else{
+            }
+          }
+        }else{
                 echo 'No replies';
             }
         }else {
@@ -100,6 +116,7 @@ if(@$_SESSION['user']) {
 
 }else {
     echo 'You must be logged in';
+    
 }
 
 

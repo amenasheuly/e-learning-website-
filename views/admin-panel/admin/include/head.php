@@ -10,7 +10,7 @@
     <title> online learning Admin panel</title>
 
     <!-- Favicon and touch icons -->
-    <link rel="shortcut icon" href="../../../../resource/admin/assets/dist/img/ico/favicon.png" type="image/x-icon">
+ <!--    <link rel="shortcut icon" href="../../../../resource/admin/assets/dist/img/ico/favicon.png" type="image/x-icon"> -->
     <!-- Start Global Mandatory Style
     =====================================================================-->
     <!-- jquery-ui css -->

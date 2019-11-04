@@ -1,4 +1,5 @@
-<body>
+<body onload="myFunction()">
+
 <header class="main" style="background-color: #3F4B58;">
     <div class="container">
         <nav class="navbar" role="navigation" >
@@ -18,31 +19,31 @@
                             <a href="../user/index.php"><span>Home</span></a>
                         </li>
 
-                        <li class="dropdown">
+                       <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>Academic</span> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="../video-first/video-list.php">Class 1</a></li>
-                                <li><a href="../video-scond/video-list2.php">Class 2</a></li>
-                                <li><a href="../video-third/video-list3.php">Class 3</a></li>
-                                <li><a href="../video-four/video-list4.php">Class 4</a></li>
-                                <li><a href="../video-five/video-bn5.php">Class 5</a></li>
-                                <li><a href="../video-six/video-list.php">Class 6</a></li>
-                                <li><a href="../video-seven/video-list.php">Class 7</a></li>
-                                <li><a href="../jsc/video-list.php">JSC</a></li>
-                                <li><a href="../ssc/video-list.php">SSC</a></li>
-                                <li><a href="../hsc/video-list.php">HSC</a></li>
+                                <li><a href="../video/video-bn.php?class=1">Class 1</a></li>
+                                <li><a href="../video/video-bn.php?class=2">Class 2</a></li>
+                                <li><a href="../video/video-bn.php?class=3">Class 3</a></li>
+                                <li><a href="../video/video-bn.php?class=4">Class 4</a></li>
+                                <li><a href="../video/video-bn.php?class=5">Class 5</a></li>
+                                <li><a href="../video/video-bn.php?class=6">Class 6</a></li>
+                                <li><a href="../video/video-bn.php?class=7">Class 7</a></li>
+                                <li><a href="../video/video-bn.php?class=jsc">JSC</a></li>
+                                <li><a href="../video/video-bn.php?class=ssc">SSC</a></li>
+                                <li><a href="../video/video-bn.php?class=hsc">HSC</a></li>
                             </ul>
                         </li>
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>Explore</span> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="../language/video-list.php">Language Skill</a></li>
-                                <li><a href="../skill/video-list.php">Software Skills</a></li>
-                                <li><a href="../skill/video-list.php">Skills Development</a></li>
-                                <li><a href="../computer/video-list.php">Computer Science</a></li>
-                                <li><a href="../arts/video-list.php">Arts & Humanities</a></li>
-                                <li><a href="../other/video-list.php">others</a></li>
+                                <li><a href="../video/video-bn.php?class=language">Language Skill</a></li>
+                                <li><a href="../video/video-bn.php?class=software">Software Skills</a></li>
+                                <li><a href="../video/video-bn.php?class=skill">Skills Development</a></li>
+                                <li><a href="../video/video-bn.php?class=computer">Computer Science</a></li>
+                                <li><a href="../video/video-bn.php?class=arts">Arts & Humanities</a></li>
+                                <li><a href="../video/video-bn.php?class=others">others</a></li>
                             </ul>
                         </li>
                         <li><a href="../aboutus/about_us.php"><span>About us</span></a></li>
@@ -51,7 +52,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>Login</span> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                     <li><a  href="../login/user_login.php">Sign in as student</a></li>
-                                    <li><a href="../login/user_login.php">Teacher Login</a></li>
+                                    <li><a href="../login/t_login.php">Teacher Login</a></li>
                                       <li><a href="../../admin-panel/admin/login.php">Admin login</a></li>
                                
                             </ul>

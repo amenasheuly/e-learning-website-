@@ -7,7 +7,7 @@ $password = @$_POST['pass'];
 if(isset($_POST['submit'])){
 
     if($email&&$password){
-        $check=mysqli_query($link,"SELECT * FROM `online_learning`.`t_reg` WHERE `email` = '$email'");
+        $check=mysqli_query($link,"SELECT * FROM `online_learning`.`users` WHERE `email` = '$email'");
         $rows=mysqli_num_rows($check);
         if(mysqli_num_rows($check) !=0){
             while($row=mysqli_fetch_assoc($check)){

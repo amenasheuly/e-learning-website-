@@ -7,7 +7,7 @@ if (@$_SESSION['email']) {
 ?>
     
 <?php 
-    $query =   "SELECT * FROM assignment WHERE st_email= '".$_SESSION['email']."'";
+    $query =   "SELECT * FROM mark WHERE s_email= '".$_SESSION['email']."'";
     $select_posts = mysqli_query($link,$query);
 
 
@@ -80,9 +80,9 @@ if (@$_SESSION['email']) {
                                    <th> Submitted By</th>
                                    <th>Teacher Email</th>
                                     <th>Assignment on</th>                         
-                                   <th>Assignment file</th>
+                                   
                                    <th>Mark</th>
-                                    <th colspan="2">Update</th>
+                                    <th>Update</th>
                                 </tr>
                                 </thead>
 <?php                            
@@ -97,7 +97,7 @@ $s_email = $row['s_email'];
 $email = $row['st_email'];
 $topics = $row['topics'];
 
-$fileviw = $row['file'];
+$mark = $row['mark'];
 
 // var_dump($fileviw);
 // die();
@@ -113,10 +113,10 @@ $fileviw = $row['file'];
     echo '<td>'.$s_email.'</td>';                            
     echo '<td>'.$email.'</td>';
     echo '<td>'.$topics.'</td>';
-    echo '<td>'.$fileviw.'</td>';
-    echo "<td><a href='mark.php?id=".$id."s_name=".$s_name."s_date=".$s_date."class=".$class."subject=".$subject."s_email=".$s_email."email=".$email."topics=".$topics."file=".$fileviw."'>Mark</a></td>";
+    echo '<td>'.$mark.'</td>';
+  
    
-    echo "<td><a href='#'>Edit</a></td>";
+   
     echo "<td><a href='delete-file.php?id=".$id."' onclick='checkdelete()'>Delete</a></td>";
                              
     echo "</tr>";

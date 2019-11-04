@@ -35,7 +35,7 @@ if (@$_SESSION['email']) {
 
  
     <section class="content">
-    <div class="row">
+            <div class="row">
    
     <div class="table-responsive">
   
@@ -58,13 +58,12 @@ $(document).ready(function(){
 
  active_teacher_list();
 
- 
-  update_last_activity();
+   update_last_activity();
   active_teacher_list();
  
   update_chat_history_data();
  
- 
+
 
  function active_teacher_list()
  {
@@ -87,7 +86,7 @@ $(document).ready(function(){
    }
   })
  }
- 
+
  function make_chat_dialog_box(to_user_id, to_user_name)
  {
   var modal_content = '<div id="user_dialog_'+to_user_id+'" class="user_dialog" title="You have chat with '+to_user_name+'">';

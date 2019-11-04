@@ -111,15 +111,16 @@ $fileviw = $row['file'];
     echo '<td>'.$class.'</td>';
     echo '<td>'.$subject.'</td>';
     echo '<td>'.$title.'</td>';
-                                    echo '<td>'.$des.'</td>';
-                                    echo '<td>'.$author.'</td>';
-                                    echo '<td>'.$video.'</td>';
-                                    echo '<td>'.$email.'</td>';
-                                    echo '<td>'.$fileviw.'</td>';
+    echo '<td>'.$des.'</td>';
+    echo '<td>'.$author.'</td>';
+    echo '<td>'.$video.'</td>';
+    echo '<td>'.$email.'</td>';
+    echo '<td>'.$fileviw.'</td>';
 
 
                                     
 
+ 
  
 
 
@@ -166,6 +167,8 @@ $fileviw = $row['file'];
     </section> <!-- /.content -->
 
 <?php include '../include/footer.php'?>
+
+
 
 
 

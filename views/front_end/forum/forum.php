@@ -84,7 +84,7 @@ if(@$_SESSION['user']) {
                 ?>
 
 
-                        <a href='topics.php'>View All</a>
+                <a href='topics.php'>View All</a>
 
             </div>
 
@@ -101,6 +101,7 @@ if(@$_SESSION['user']) {
     }
     }else {
         echo 'You must be logged in';
+        header("Location: ../user/index.php");
     }
 
 

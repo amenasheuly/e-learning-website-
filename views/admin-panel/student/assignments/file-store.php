@@ -14,7 +14,7 @@ $topics = @$_POST['topics'];
 
 
 $file_dir = "Assfile/";
-$file = $file_dir . basename($_FILES["file"]["name"]);
+$file = $file_dir. basename($_FILES["file"]["name"]);
 $uploadOk = 1;    
 $fileType = strtolower(pathinfo($file,PATHINFO_EXTENSION));
 $filemov = move_uploaded_file($_FILES["file"]["tmp_name"], $file);

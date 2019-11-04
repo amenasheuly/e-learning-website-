@@ -78,6 +78,8 @@
                     </div>
                 </div>
             </div>
+    <div id="user_details"></div>
+    <div id="user_model_details"></div>
 
         </div>
 

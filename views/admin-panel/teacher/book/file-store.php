@@ -13,7 +13,7 @@ $author = @$_POST['author'];
 
 $email = @$_POST['t_email'];
 $file_dir = "book/";
-$file = $file_dir . basename($_FILES["file"]["name"]);
+$file = $file_dir. basename($_FILES["file"]["name"]);
 $uploadOk = 1;    
 $fileType = strtolower(pathinfo($file,PATHINFO_EXTENSION));
 $filemov = move_uploaded_file($_FILES["file"]["tmp_name"], $file);

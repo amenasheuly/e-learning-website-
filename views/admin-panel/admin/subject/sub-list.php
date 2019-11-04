@@ -67,7 +67,7 @@ $select_posts = mysqli_query($link,$query);
                                 <thead>
                                 <tr>
                                     <th>Serial No</th>
-                                    
+                                    <th>Class</th>
                                     <th>Subject</th>
                                    
                                     <th colspan="2">Update</th>
@@ -76,7 +76,7 @@ $select_posts = mysqli_query($link,$query);
 <?php                            
 while ($row=mysqli_fetch_assoc($select_posts)) {
  $id = $row['id'];
-
+ $class = $row['class'];
  $subject = $row['subject'];
 
 
@@ -84,14 +84,14 @@ while ($row=mysqli_fetch_assoc($select_posts)) {
     echo '<tr>';
               
      echo '<td>'.'<input type="radio" name="radioGroup">'.'<label>'.$id.'</label>'.'</td>';
-  
+     echo '<td>'.$class.'</td>';
     echo '<td>'.$subject.'</td>';
    
 
  
 
 
-                                    echo "<td><a href='edit-sub.php?id=".$id."subject=".$subject."'>Edit</a></td>";
+                                    echo "<td><a href='edit-sub.php?id=".$id."class=".$class."subject=".$subject."'>Edit</a></td>";
                                     echo "<td><a href='delete-sub.php?id=".$id."' onclick='checkdelete()'>Delete</a></td>";
                                    
                                     
